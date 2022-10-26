@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1:hover {
+    color: red;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.500);
+}
+
+h2:hover {
+    color: blue;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.500);
+}
+
+.square {
+    height: 80px;
+    width: 80px;
+
+    padding: 16px;
+    
+    background: gray;
+    transition: 
+    transform 1s,
+    background-color 1s 1s,
+    width 1s 2s,
+    height 1s 3s;
+}
+
+.square:hover {
+    transform: rotateY(720deg);
+
+    background: red;
+
+    width: 180px;
+    height: 250px;
+    
+}

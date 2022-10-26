@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-06-Form-Challange</title>
+
+    <style>
+        body {
+            background-color: #E5E5E5;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        form {
+            width: 320px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 16px;
+            background: #FAFAFC;
+            width: 350px;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .area-01 label, .area-03 label {
+            width: 78px;
+            display: inline-block;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CRIE SEU PERFIL</h1>
+    </header>
+    <main>
+        <section>
+            <form action="" method="get">
+                <fieldset class="area-01">
+                    <legend>DADOS PESSOAIS</legend>
+                    <section>
+                        <label for="name">Nome:</label>
+                        <input type="text" placeholder="Digite seu nome" id="name">
+                    </section>
+                    <br>
+                    <section>
+                        <label for="">Nascimento:</label>
+                        <input type="date">
+                    </section>
+                    <br>
+                    <section>
+                        <label for="rg">RG:</label>
+                        <input type="text" placeholder="Informe seu RG" id="rg">
+                    </section>
+                    <br>
+                    <section>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" placeholder="Informe seu CPF" id="cpf">
+                    </section>
+                    <br>
+                    <section>
+                        <label for="check-1">Masculino</label>
+                        <input type="radio" name="sexo" value="masculine" id="check-1">
+
+                        <label for="check-2">Feminino</label>
+                        <input type="radio" id="check-2" name="sexo" value="feminino">
+                    </section>
+                </fieldset>
+                <br>
+                <section>
+                    <fieldset class="area-02">
+                        <legend>LINGUAGENS DE DOMÍNIO</legend>
+                        <input type="checkbox" id="html">
+                        <label for="html">HTML</label>
+                        <input type="checkbox" id="css">
+                        <label for="css">CSS</label>
+                        <input type="checkbox" id="js">
+                        <label for="js">JavaScript</label>
+                        <input type="checkbox" id="sql">
+                        <label for="sql">SQL</label>
+                    </fieldset>
+                    <br>
+                </section>
+
+                <section>
+                    <fieldset class="area-03">
+                        <legend>DADOS DE LOGIN</legend>
+                        <section>
+                            <label for="email">E-mail</label>
+                            <input type="text" placeholder="fulano@gmail.com" id="email">
+                        </section>
+                        <br>
+                        <section>
+                            <label for="senha">Senha:</label>
+                            <input type="password" placeholder="Minimo de 8 caracteres" id="senha">
+                        </section>
+                        <br>
+                        <section>
+                            <label for="">Foto:</label>
+                            <input type="file">
+                        </section>
+                    </fieldset>
+                </section>
+                <br>
+                <section>
+                    <fieldset class="area-04">
+                        <legend>OBSERVAÇÕES</legend>
+                        <label for="" hidden>Observações</label>
+                        <textarea name="" id="" cols="36" rows="10" placeholder="Faça observações sobre seu perfil"
+                            maxlength="370"></textarea>
+                    </fieldset>
+                </section>
+
+                <br>
+                <button type="submit">Salvar</button>
+                <button type="reset">Limpar</button>
+        </section>
+        </form>
+    </main>
+</body>
+
+</html>

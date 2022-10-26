@@ -1,0 +1,26 @@
+@import url(style.css);
+
+body {
+    background-color: rgba(0, 0, 0, 0.822);
+    color: white;
+}
+
+.contact-page {
+    animation: topDownOpacityAnimation 1s;
+}
+
+.contact-page main {
+    margin-top: 10rem;
+    height: 8vh;
+    background: #333;
+    color: white;
+}
+
+.contact-page main h1 {
+    text-align: center;
+}
+
+.cards {
+    width: 100%;
+    margin: 0 auto;
+}

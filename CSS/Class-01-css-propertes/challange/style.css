@@ -1,0 +1,58 @@
+header h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-size: 65px;
+    text-shadow: 1px 2px 1.0px black;
+    margin-bottom: 30px;
+}
+
+body {
+    background-color: #CCC;
+    height: 100%;
+}
+
+.conteudo {
+    background-color: yellow;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    color: white;
+} 
+
+div {
+    width: 500px;
+    height: 300px;
+    background-color: black;
+}
+
+.div-01 {
+    border-radius: 40px;
+    width: 500px;
+    box-shadow: 5px 5px 1.5px black;
+}
+
+.conteudo img {
+    padding: 3px;
+    width: 200px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 52px;
+    margin: 0;
+}
+
+section {
+    display: inline;
+    margin-left: 20px;
+}
+
+main {
+    width: 500px;
+    margin: 0 auto;
+}

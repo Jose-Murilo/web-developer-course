@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+@import url("../Class-02-box-model/style.css");
+
+@font-face {
+    font-family: myFontSimpsons;
+    src: url(fonts/Homer_Simpson_Revised.ttf);
+}
+
+@font-face {
+    font-family: Grafite;
+    src: url(fonts/Nightcore\ Demo.ttf);
+}
+
+@font-face {
+    font-family: Playstation;
+    src: url(fonts/zrnic\ rg.ttf);
+}
+
+article {
+    display: flex;
+    gap: 38px;
+
+    /* animation-name: MyAnimation; */
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+
+}
+
+h2 {
+    animation-name: MyAnimationRotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+
+    display: inline-block;
+}
+
+h3 {
+    font-family: myFontSimpsons;
+    font-size: 32px;
+}
+
+h3.playstation {
+    font-family: Playstation;
+}
+
+h4 {
+    font-family: Grafite;
+    font-size: 32px;
+}
+
+
+@media (max-width: 775px) {
+    article {
+        display: block;
+    }
+
+    h2 {
+        margin-top: 16px;
+    }
+
+    p {
+        margin-top: 8px;
+    }
+
+    .square1 {
+        position: static;
+    }
+}
+@keyframes MyAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes MyAnimationRotate {
+    to {
+        transform: rotateZ(0deg);
+    }
+    
+    from {
+        transform: rotateZ(360deg);
+    }
+}

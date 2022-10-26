@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+:root {
+    font-size: 10px;
+}
+
+body {
+    /* background: linear-gradient(lightblue, lightgreen); */
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Bungee Spice', cursive;
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 200;
+    /* height: 90vh; */
+
+}
+
+
+h1, p{
+    color: #00f;
+    color: #0000ff;
+    font-weight: bold;
+    /* font-style: italic;     */
+    /* 0-9 A B C D E F*/
+    font-size: 3.3rem;
+
+    /* font-size: 70% */
+
+    /* letter-spacing: 8px; */
+    /* word-spacing: 2rem; */
+    /* line-height: 2; */
+
+    
+
+    text-shadow: 1px 0.5px 0.5px black;
+
+}
+
+.texto p {
+    color: rgb(255, 255, 255,);
+    color: hwb(240 0% 0%);
+}
+
+.texto {
+    color: peru;
+    background-color: rgba(141, 87, 32, 0.158);
+    /* border: 1px solid red; */
+}
+
+#ultimoTexto .texto {
+    color: azure;
+}
+
+div.myImage {
+    background: radial-gradient(purple, red, yellow);
+    /* background-image: url("image/Tor_Browser_icon.svg"); */
+    height: 120px;
+    width: 120px;
+    border-radius: 20%;
+
+}

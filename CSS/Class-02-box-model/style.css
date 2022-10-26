@@ -1,0 +1,78 @@
+* {
+    /* Reset com o seletor universal*/
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 32px;
+}
+
+
+main {
+    height: 80vh;
+    border: solid 2px black;
+    padding: 32px;
+    /* display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* position: absolute; */
+    /* top: 20px; */
+    position: relative;
+}
+
+div {
+    height: 180px;
+    width: 180px;
+    color: white;
+    font-size: 64px;
+    padding: 16px;
+    /*padding: 16px  62px 64px 128px;*/
+    /* margin: 16px; */
+    border: 1px solid black;
+    /* display: inline; */
+    /* display: inline-block; */
+}
+
+.square1 {
+    background-color: red;
+    position: absolute;
+    z-index: -100;
+}
+
+.square2 {
+    background-color: green;
+    /* margin-top: 12px; */
+    position: absolute;
+    left: 68px;
+    top: 68px;
+    z-index: -99;
+
+}
+
+.square3 {
+    background-color: blue;
+    position: absolute;
+    left: 108px;
+    top: 108px;
+    z-index: -98;
+}
+
+h1 {
+    position: sticky;
+    top: 32px;
+}
+
+h2 {
+    position: sticky;
+    top: 32px;
+}
+
+/* p {
+    position: sticky;
+    left: 160x;
+} */

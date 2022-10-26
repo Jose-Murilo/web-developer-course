@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-06-form</title>
+    
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        legend{
+            color: cadetblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <h1>Formulario</h1>
+    <fieldset>
+        <legend>Dados pessoais</legend>
+        <section>
+            <form action="">
+                <label for="nome"></label>
+                <input type="text" placeholder="Escreva seu nome" id="nome" autofocus required>
+                <br><br>
+                <input type="date" name="" id="" required>
+                <br><br>
+                <button type="submit">Enviar</button>
+        </section>
+        </form>
+    </fieldset>
+    <br>
+    <section>
+        <form action="">
+            <fieldset>
+                <legend>Tipos de inputs</legend>
+                <label for="">Frutas</label>
+                <input type="" id="frutas" name="frutas" list="list-fruits">
+                
+                <datalist id="list-fruits">
+                    <option value="Pêra"></option>
+                    <option value="Maça"></option>
+                    <option value="Manga"></option>
+                </datalist>
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </section>
+<br>
+    <fieldset>
+        <form action="">
+            <section>
+            <label for="">E-mail</label>
+            <input type="email" autocomplete="email" name="email">
+        </section>
+        <br>
+        <section>
+            <label for="">Senha</label>
+            <input type="password" name="senha" minlength="8">
+        </section>
+        <br>
+        <section>
+            <label for="">CPF</label>
+            <input type="number" min="5" max="100" pattern="[0-9a-zA-Z]">
+            <button type="submit">Enviar</button>
+        </section>
+        </form>
+    </fieldset>
+    <br> -->
+
+    <h1>Segunda parte Class Form</h1>
+    <main>
+    <form action="">
+        <fieldset>
+            <legend>Arquivos</legend>
+            <label for="photo">Foto</label>
+            <input type="file" id="photo" name="photo" accept="image/">
+            <!-- accept="image/", "video/", ".doc"... -->
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Filmes Favoritos</legend>
+
+            <section>
+                <input type="checkbox" id="titanic" name="Titanic">
+                <label for="titanic">Titanic</label>
+            </section>
+
+            <section>
+                <input type="checkbox" id="lagoa" name="Lagoa azul">
+                <label for="lagoa">Lagoa azul</label>
+            </section>      
+        </fieldset>
+
+        <fieldset>
+            <legend>Termo de uso </legend>
+            <label for="yes">Sim</label>
+            <input type="radio" id="yes" name="term" value="termyes" checked>
+
+            <label for="no">Não</label>
+            <input type="radio" id="no" name="term" value="termno">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Observações</legend>
+            <textarea name="obs" id="obs" cols="36" rows="10" placeholder="Escreva suas observações" maxlength="450"></textarea>
+        </fieldset>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+:root {
+    font-size: 10px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+
+    grid-template-areas: 
+        "Header Header" 
+        "Main Aside"
+        ". Aside"
+        " . Aside"
+        "Footer Footer";
+
+        grid-template-columns: 120px 120px;
+        grid-template-rows: 100px 150px 80px 100px 100px;
+
+        padding: 16px;
+        gap: 16px;
+
+        justify-content: center;
+        align-content: center;
+
+        justify-items: center;
+        align-items: center;
+
+}
+
+header {
+    background: rgb(51, 250, 51);
+    grid-area: Header;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+main {
+    background: lightskyblue;
+    grid-area: Main;
+}
+
+aside {
+    background: lightgray;
+    grid-area: Aside;
+}
+
+footer {
+    background: rgb(236, 103, 80);
+    grid-area: Footer;
+}

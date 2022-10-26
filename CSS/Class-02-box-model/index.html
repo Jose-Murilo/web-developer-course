@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Class 02 Box Model</title>
+
+    <!-- 
+        BOX MODEL
+            Cada elemento é representado como uma caixa retangular
+            Essa caixa possui propriedades de uma caixa em 2 dimensões (largura x altura)
+            
+            Properties:
+                -width, heigh (size)  
+                -content
+                -border
+                -padding
+                -margin
+                    Margin Collapsing 
+                        Quando o top se junta com o bottom sem somar (Pega o margin maior)
+                        Obs: Quando os elementos estão um do lado do outro somam-se as margens.
+                Shorthand: 
+                    - 1px > top, right, bottom, left
+                    - 1px 2px > top, bottom, right, left
+                    - 1px 2px 3px > top, right,left, bottom 
+                    - 1px 2px 3px 4px > top, right, bottom, left
+                
+               Position 
+                    -static      
+                    -relative    
+                    -absolute    
+                    -sticky
+                    -fixed
+                        (top, right, bottom, left) 
+                        
+                Display
+                    - block
+                    - inline 
+                        height e width não funcionam
+                        Somente valores horizontais em padding, margin e border
+                        
+                    - inline-block
+                    Anotar!!!!!
+
+                    - flex
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+     -->
+
+</head>
+
+<body>
+        <section>
+            <h1>Titulo 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque temporibus necessitatibus, earum suscipit rerum dolore blanditiis. Minus laboriosam ducimus est quam repellat consequuntur libero omnis. Dolor officia ullam expedita maxime?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero exercitationem eligendi ullam fugit quod modi iste et dolorum explicabo. Veniam dolore nulla necessitatibus provident expedita facilis et dolorum possimus accusantium?</p>
+        </section>
+        
+        <section>
+            <h2>Titulo 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eveniet commodi at ad iste assumenda quis, obcaecati excepturi quos nobis itaque minima dolorem rem veritatis odit perferendis doloremque unde voluptate.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, modi officia explicabo repellat unde delectus error porro optio illo sed. Cum non et maiores tempore? Soluta dignissimos cupiditate quasi mollitia.</p>
+        </section>
+    <main>
+        <div class="square1">X</div>
+        <div class="square2">Y</div>
+        <div class="square3">Z</div>
+    </main>
+</body>
+</html>
