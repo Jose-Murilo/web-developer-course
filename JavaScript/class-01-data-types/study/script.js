@@ -108,14 +108,75 @@
 
 // >>>> Template Strings (Interpolation) <<<<
 
-let num1 = 20;
-let num2 = 20;
-let total = num1 + num2;
+// let num1 = 20;
+// let num2 = 20;
+// let total = num1 + num2;
 
-// alert("Olá")
+// alert("Olá");
 // console.log("Num1 = " + num1);
-console.log("A soma de " + num1 + " e " + num2 + " é " + total);
+// console.log("A soma de " + num1 + " e " + num2 + " é " + total);
 
-console.log(`A soma de ${num1} e ${num2} é ${total}`);
+// console.log(`A soma de ${num1} e ${num2} é ${total}`);
 
-alert(`A soma de ${num1} e ${num2} é ${total}`)
+// alert(`A soma de ${num1} e ${num2} é ${total}`);
+
+
+// >>>>> Type structutal (Object, functions) <<<<<
+
+// let name = "Murilo";
+// let age = 16;
+// let profission = "Web Developer";
+
+// person = {
+//     name: "Emanuel",
+//     age: 29,
+//     profession: "Web Developer"
+// };
+
+// console.log(name);
+// console.log(age);
+// console.log(profession);
+
+
+// console.log(typeof person);
+// console.log(person);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(`${person.name} tem ${person.age} e sua profissão é ${person.profession}`);
+
+
+// Array (Vetor)
+
+// countries = ["Brasil", "Alemanha", "Espanha"]
+// countries = ["Brasil", 5, "Alemanha", 4, "Espanha",1]
+countries = [
+    ["Brasil", 5], 
+    ["Alemanha", 4], 
+    ["Espanha",1]
+]
+
+// console.log(typeof countries)
+// console.log(countries)
+// console.log(countries[2])
+// console.log(countries[0][0])
+
+countries = [
+    {
+        name: "Brasil",
+        champions: 5
+    },
+
+    {
+        name: "Alemanha",
+        champions: 4
+    },
+
+    {
+        name: "Espanha",
+        champions: 1
+    },
+]
+
+let country = 1; 
+
+console.log(`${countries[country].name} tem ${countries[country].champions} titulos(s)`);
