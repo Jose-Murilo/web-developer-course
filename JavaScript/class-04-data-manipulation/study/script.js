@@ -64,47 +64,97 @@ let num2 = -7.9876
 // console.log(Math.round(Math.random().toFixed(1) * 10)) // IMPORTANTE DE MAIS
 
 
+// >>>>>>>>>>>>>> Date Manipulation <<<<<<<<<<<<
 
-// >>>>> Date Manipulation <<<<<
-
-let date = new Date()
+// let dateNow = new Date()
 let date1 = new Date("2022-03-01 12:03:19")
-let date2 = new Date("2022-04-01 15:03:19")
+let date2 = new Date("2022-04-01 12:03:19")
 
-// document.write(date)
-// let hour = date1.getHours() // Para horas
-// let minutes = date1.getMinutes() // Para minutos
-// let seconds = date1.getSeconds() // Para segundos
+// document.write(dateNow)
+// let hour = dateNow.getHours()
+// let minutes = dateNow.getMinutes()
+// let seconds = dateNow.getSeconds()
+// let milliseconds = dateNow.getMilliseconds()
 
-// document.write(`${String(hour).padStart(2, "0")}: ${String(minutes).padStart(2, "0")}: ${String(seconds).padStart(2, "0")}`)
+// document.write(`${String(hour).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}:${String(milliseconds).padStart(3, "0")}`)
 
-// date1.setHours(date.getHours() - 3)
-// date1.setMinutes(date.getMinutes() + 60)
-// date1.setSeconds(date.getSeconds() + 60)
+// date1.setHours(date1.getHours() - 3)
+// date1.setMinutes(date1.getMinutes() + 60)
+// date1.setSeconds(date1.getSeconds() + 60)
 
 // document.write(date1.toLocaleTimeString("pt-BR"))
 
 
-
-let day = date.getDay() // Para Dia
-let data = date.getDate() // Para Mês
-let month = date.getMonth() + 1 // Para Mês
-let year = date.getFullYear() // Para Ano
-// let minuts = date.getMinutes() // Para Ano
-// let seconds = date.getSeconds() // Para Ano
+// let day = dateNow.getDay()
+// let date = dateNow.getDate()
+// let month = dateNow.getMonth() + 1
+// let year = dateNow.getFullYear()
+// let minutes = date1.getMinutes()
+// let seconds = date1.getSeconds()
 
 // document.write(day + 1) // 0 - 6
-// document.write(data) 
-// document.write(month + 1) // 0 - 12
+// document.write(date)
+// document.write(month + 1) // 0 - 11
 // document.write(year)
-// document.write(`${String(data).padStart(2, "0")}/${(String(month).padStart(2, "0"))}/${year}`)
 
-// date.setDate((date.getDay() + 30))
-date.setDate((date.getMonth() + 2))
-date.setDate((date.getFullYear() + 30))
+// document.write(`${String(date).padStart(2, "0")}/${String(month).padStart(2, "0")}/${year}`)
 
-// document.write(date1.toLocaleString("pt-BR"))
+// dateNow.setDate(dateNow.getDate() + 30)
+// dateNow.setMonth(dateNow.getMonth() + 2)
+// dateNow.setFullYear(dateNow.getFullYear() + 30)
 
-// document.write(date1.toLocaleString("pt-BR"))
+// document.write(dateNow.toLocaleDateString("pt-BR"))
 
-document.write(Math.floor((date2 - date1) / 1000 / 60 / 60 / 24))
+// document.write(dateNow.toLocaleString("pt-BR"))
+
+                                    //   s      m    h    d
+// document.write(Math.abs(date1 - date2) / 1000 / 60 / 60 / 24)
+
+
+
+// >>>>>>>>>>>> Array Manipulation <<<<<<<<<<<<<
+
+// let myArray1 = [1, "a", "A"] 
+// let myArray2 = Array(1, "a", "A") // Construtora
+// console.log(myArray1)
+
+
+// let myArray = Array(1, "a", () => "A" )
+// console.log(myArray)
+// console.log(myArray.length)
+// console.log(myArray[2]())
+
+let techs = ['HTML', 'CSS', 'Git']
+
+techs.push('JavaScript') // Insere no topo/ultimo
+// document.write(techs)
+// let removeElement = techs.pop() // Remove do topo/ultimo (LIFO "Pilha")
+// alert(`Elemento ${removeElement} foi removido com sucesso`)
+// document.write(techs)
+
+techs.unshift('SQL') // Inserir no inicio
+// document.write(techs)
+// let removeElement = techs.shift() // Remove do inicio (FIFO "Fila")
+// document.write(techs)
+
+// console.log(`${removeElement} foi removido!`)
+
+
+// document.write(techs)
+
+let index = techs.indexOf('Git')
+// techs.splice(2, 1)
+// techs.splice(index, 1)
+// document.write(techs)
+// console.log(techs.splice(index, 1))
+// techs.splice(techs.indexOf("SQL"), 1)
+
+// document.write(techs.sort())
+nums = [2, "2", 2, 1, 5, 19, 10, 20]
+document.write(nums.sort((a, b) => a - b))
+
+// document.write(`${techs} <br>`)
+// document.write(techs.slice(0, -2))
+
+// console.log(techs.sort())
+// console.log(index)
