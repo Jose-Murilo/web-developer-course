@@ -11,13 +11,13 @@ function deleteArrayElements(techName) {
     auxArray.map(element => {
         // document.write(`${element} <br>`)
 
-        if (String(techName).toLocaleLowerCase().replace(" ", "") != String(element).toLocaleLowerCase().replace(" ", "")) {
+        if (String(techName).toLocaleLowerCase().split(" ").join("") != String(element).toLocaleLowerCase().split(" ").join("")) {
            techs.push(element)
         }
     })
 }
 
-deleteArrayElements("Java script")
+deleteArrayElements("Javascript")
 document.write(techs)
 
 
