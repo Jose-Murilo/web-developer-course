@@ -7,17 +7,17 @@ const nameStudent = prompt("Digite seu nome")
 const nota1 = Number(prompt("Digite sua primeira nota"))
 const nota2 = Number(prompt("Digite sua primeira nota"))
 
-function calcAvarege(nota1, nota2) {
+function calcAverage(nota1, nota2) {
     return (nota1 + nota2) / 2
 }
 
-const avarage = calcAvarege(nota1, nota2)
+const average = calcAverage(nota1, nota2)
 let situation
 
-if (avarage >= 7) {
+if (average >= 7) {
     situation = "Aprovado"
 } else {
     situation = "Reprovado"
 }
 
-alert(`O ${nameStudent} tem media de ${avarage} e foi ${situation}`)
+alert(`O ${nameStudent} tem media de ${average} e foi ${situation}`)
