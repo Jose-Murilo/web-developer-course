@@ -1,50 +1,46 @@
-// ARRAYS (Methods) - Principle of Immutability = Não muda nunca
-
-// forEach não tem retorno e modifica todo o array
+// ARRAYS (Methods) - Principle of Immutability
 
 const team = 'Brasil'
-const teams = ['Brasil', 'alemanha', 'Argentina', 'Portugal']
-// console.log(teams)
+// const team = {name: 'Brasil', cups: 5}
+const teams = ['Brasil', 'Argentina', 'Portugal', 'Alemanha']
 
-// let teamArray = Array.from('Brasil')
-// teamArray.forEach((value, index, array) => {
+// >>>>>>>>> forEach <<<<<<<<<<
+// teams.forEach((value, index, array) => {
 //     console.log(value, index, array)
 // })
-// console.log(teamArray)
-// let testReturnForEach = team.forEach((team, index, array) => {
-//     console.log(team, index, array)
+
+// let teamArray = Array.from(team)
+// let testReturnForEach = teamArray.forEach((value, index, array) => {
+//     console.log(value, index, array)
 // })
 
 // console.log(testReturnForEach) // no return
 
-// >>>> .map tem retorno e não modifica o array original <<<< boa pratica
-
-// let testReturnMap = teams.map((team, index, array) => {
-//     // console.log(team, index, array)
+//>>>>>>>>> Map <<<<<<<<<<<
+// let testReturnMap = teamArray.map((team, index, array) => {
+//     console.log(team, index, array)
 //     return [team, index, array]
 // })
 
-// console.log(testReturnMap) // return
+// console.log(testReturnMap) // Immutable
 
-
-const real = [10, 30, 40, 20 ,50]
-let dolarValue = 5.26
-// const convertDollar = real.map((value) => +(value * dolarValue).toFixed(2))
-
-
-// const sumReal = real.reduce((a, b) => a + b)
-
-// const sumConvertedDollar = convertDollar.reduce((a, b) => a + b)
-
+const real = [10, 20, 30, 40, 50]
+// const convertDollar = real.map((value) => value * 5.36)
 // console.log(convertDollar)
-// console.log(sumConvertedDollar)
-
 // console.log(real)
+
+// >>>>>>>>> Reduce <<<<<<<<<<
+// let initial = 200
+// const sumReal = real.reduce((a, b) => a + b, initial)
 // console.log(sumReal)
 
-// console.log(real.map(value => value * dolarValue).reduce((a, b) => a + b))
+// const sumConvertedDollar = convertDollar.reduce((a, b) => a + b)
+// console.log(sumConvertedDollar)
 
-// console.log(real.filter((value) => value > 30))
+// console.log(real.map(value => value * 5.36).reduce((a, b) => a + b))
+
+// >>>>>>>>> Filter <<<<<<<<<<
+// console.log(real.filter((value) => value < 40))
 
 const averageStudants = [
     {id: 1, name: 'João', average: 4, birth: 1990},
@@ -55,40 +51,33 @@ const averageStudants = [
     {id: 6, name: 'Pedro', average: 7, birth: 1993},
 ]
 
-// let approvedStudants = averageStudants.filter((studant) => studant.average >= 7)
+// console.table(averageStudants.filter((studant) => studant.average >= 7));
+// console.table(averageStudants.filter(studant => studant.birth >= 2000))
 
-// let birthStudants = averageStudants.filter((studant) => studant.birth >= 2000)
+let yearCurrent = new Date().getFullYear()
+// console.log(yearCurrent);
 
-// let ageStudants = averageStudants.filter((studant) => (new Date().getFullYear() - studant.birth) >= 30)
+// console.table(averageStudants.filter(studant => (yearCurrent - studant.birth) >= 30))
+// console.table(averageStudants.filter((studant) => Array.from(studant.name)[0].toLocaleLowerCase() == "j"));
 
-// console.table(approvedStudants)
-// console.table(birthStudants)
-// console.table(ageStudants)
+// >>>>>>> Find <<<<<<<
+// console.log(averageStudants.find((studant) => (yearCurrent - studant.birth) >= 30));
+// console.log(averageStudants.find((studant) => studant.name.toLocaleLowerCase() == 'amanda'));
+// console.log(averageStudants.find((studant) => studant.id == 5));
 
-// >>>>> Find <<<<<
+// >>>>>>> Sort <<<<<<<<
+// Table ASCII (0-9, A-Z, a-z)
 
-// let findStudant = averageStudants.find((studant) => (new Date().getFullYear() - studant.birth) >= 30)
+const numArray = [2, "2", 2, 1, 5, 19, 10, 20]
+// console.log(numArray.sort((a, b) => a - b))
 
-// let findStudant = averageStudants.find((studant) => studant.name.toLocaleLowerCase() == 'amanda')
+// console.table(averageStudants.sort((a, b) => b.average - a.average))
 
-// let findStudant = averageStudants.find((studant) => studant.id == 5)
+console.table(averageStudants.sort((a, b) => {
+    if (a.name > b.name) return 1;
+    if (a.name < b.name) return -1;
+    return 0;
+}))
 
-// console.log(findStudant)
-
-console.log(teams.concat(real)); // concatenação de array
-
-// Table ASCII (0-9, A-Z, a-b)
-console.log(real.sort((a, b) => a - b));
-console.log(teams.sort((a, b) => {
-    if (a.toLocaleLowerCase() > b.toLocaleLowerCase()) {
-        return 1
-    }
-
-    if (a.toLocaleLowerCase() > b.toLocaleLowerCase()) {
-        return -1
-    }
-
-    if (a.toLocaleLowerCase() > b.toLocaleLowerCase()) {
-        return 0
-    }
-}));
+// >>>>>> Concat <<<<<<
+console.log(numArray.concat(real).sort((a, b) => a - b))
