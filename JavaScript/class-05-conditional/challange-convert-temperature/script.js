@@ -8,19 +8,32 @@
 
 
 function degreeConvert(degree) {
+    let auxDegree = String(degree).split(" ").join("")
+    let arrayDegree = Array.from(auxDegree)
+    let scaleDegree = arrayDegree.pop()
+    let newDegree = Number(arrayDegree.join(""))
+
+    console.log(auxDegree)
+    console.log(degree)
+    console.log(arrayDegree)
+    console.log(scaleDegree)
+    console.log(newDegree)
     
-    if (degree == 'C') {
-        degree = (degree - 32) * 5/9
+    if (isNaN(newDegree)) {
+        throw new Error('Insira uma temperatura válida')
     }
 
-    if (degree == 'F') {
-        C * 9/5 + 32
+    if (scaleDegree.toUpperCase() == "C") {
+        return (newDegree * 9/5 + 32).toFixed(0).toLocaleString("pt-BR")+ 'F'
+    } else if (scaleDegree.toUpperCase() == "F") {
+        return ((newDegree - 32) * 5/9).toFixed(0).toLocaleString("pt-BR") + 'C'
+    } else {
+        throw new Error("Escala inválida")
     }
 }
 
-
 try {
-    let temperature = '10C'
+    let temperature = '0C'
     console.log(`${temperature} = ${degreeConvert(temperature)}`)
 } catch (error) {
     console.log(error);
