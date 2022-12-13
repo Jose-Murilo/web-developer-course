@@ -1,32 +1,35 @@
-// Crie um programa que converta a temperatura celsius ou Fahrenheit
-// O algoritmo deve ser capaz de interpretar o valor passado e converter para o outro
-// A temperatura de entrada e de saída deve conter a letra de referência (Ex: 10C = 50F)
+// Crie um programa que converta a temperatura Celsius ou Fahrenheit
+// A temperatura de entrada e de saída deve conter a letra de referência ('C' ou 'F')
+// O algoritmo deve ser capaz de interpretar o valor passado e converter para o outro (Ex: 10C = 50F)
 // Deve funcionar com espaços, letras minúsculas e tratar dados inválidos (Throw, Try e Catch).
 
 // C = (F - 32) * 5/9
 // F = C * 9/5 + 32
 
-
-// DOM
-let div = document.querySelector("div")
-div.style.fontSize = '50px'
-div.style.textAlign = 'center'
-
-
 function degreeConvert(degree) {
-    
-    if (degree == 'C') {
-        degree = (degree - 32) * 5/9
-    }
+    let auxDegree = String(degree).split(" ").join("")
+    let arrayDegree = Array.from(auxDegree)
+    let scaleDegree = arrayDegree.pop()
+    let newDegree = Number(arrayDegree.join(""))
 
-    if (degree == 'F') {
-        C * 9/5 + 32
+    if (isNaN(newDegree)) {
+        throw new Error('Valor inválido! Insira conforme exemplo: 10F ou 20C.')
+    }
+    if (scaleDegree.toUpperCase() == "C") {
+        return (newDegree * 9/5 + 32).toLocaleString('pt-BR') + 'F'
+    }
+    else if (scaleDegree.toUpperCase() == "F"){
+        return ((newDegree - 32) * 5/9).toLocaleString('pt-BR') + 'C'
+    }
+    else {
+        throw new Error("Escala não identificada, insira 'C' ou 'F': Ex: 10F ou 20C.")
     }
 }
 
 try {
     let temperature = '10C'
-    console.log(`${temperature} = ${degreeConvert(temperature)}`)
-} catch (error) {
-    console.log(error);
+    console.log(`${temperature.toUpperCase()} =  ${degreeConvert(temperature)}`)
+}
+catch (error) {
+    console.log(error)
 }
