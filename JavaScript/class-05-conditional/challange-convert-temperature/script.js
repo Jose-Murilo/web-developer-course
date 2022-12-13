@@ -14,35 +14,19 @@ div.style.textAlign = 'center'
 
 
 function degreeConvert(degree) {
-    let auxConvert = String(degree).split(" ").join("")
-    let scale = Array.from(auxConvert)
-    let removeElement = scale.pop()
-    let temp = Number(scale.join(""))
-
-    // if (isNaN(removeElement)) {
-    //     throw new Error(alert("Insira somente Fahrenheit ou Celsius ex: (10C e 50F)"))
-    // }
-
-    if (removeElement.toUpperCase() !== 'C' && removeElement.toUpperCase() !== 'F') {
-        throw new Error(alert("Insira somente Fahrenheit ou Celsius ex: (10C e 50F)"))
+    
+    if (degree == 'C') {
+        degree = (degree - 32) * 5/9
     }
 
-    if (removeElement.toUpperCase() == "C") {
-        let C = temp * 9/5 + 32
-        return C.toFixed(0) + 'F'
-    } 
-    
-    if (removeElement.toUpperCase() == "F") {
-        let F = (temp - 32) * 5/9
-        return F.toFixed(0) + 'C'
-    } else {
-        throw new Error("Escala inválida (Ex: 10F ou 20C)")
+    if (degree == 'F') {
+        C * 9/5 + 32
     }
 }
 
 try {
-    let temperature = '10F'
-    div.innerHTML = (`${temperature} = ${degreeConvert(temperature)}`)
+    let temperature = '10C'
+    console.log(`${temperature} = ${degreeConvert(temperature)}`)
 } catch (error) {
     console.log(error);
 }
