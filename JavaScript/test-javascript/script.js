@@ -53,8 +53,13 @@ console.log(myArray)
 
 // Questão 5 (for):
 // Liste todos os valores do array criado na questão anterior ultilizando o for.
-for (let i = 0; i < myArray.length; i++) {
-    console.log(myArray[i])    
+
+// for (let i = 0; i < myArray.length; i++) {
+//     console.log(myArray[i])    
+// }
+
+for (const number of myArray) {
+    console.log(number)
 }
 
 // Questão 6 (while):
@@ -79,12 +84,14 @@ while (looping <= 500) {
 // A velocidade da pista é de 60km/h
 
 let speed = 60
-let speedDriver = 55
+let speedDriver = 35
 
 if (speedDriver > 60) {
     console.log("Você foi multado por excesso de velocidade")
-} else if (speedDriver < speed / 2){
+} else if (speedDriver < (speed / 2)){
     console.log(`Foi multado por velocidade baixa`)
+} else {
+    console.log("Não multado")
 }
 
 
