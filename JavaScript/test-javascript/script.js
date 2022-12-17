@@ -65,17 +65,13 @@ for (const number of myArray) {
 // Questão 6 (while):
 // Escreva os números de 0 a 500 sem os que pertencem à familía do 200 e do 300:
 
-let looping = 0
-while (looping <= 500) {
-    if (looping > 199 && looping <= 399) {
-        looping++
-        continue;
-    }   
-
-    console.log(looping)
-    looping++
+let count = 0
+while (count <= 500) {
+    if (count < 200 || count >=400) {
+        console.log(count);
+    }
+    count++
 }
-
 
 // Questão 7 (if):
 // Crie uma lógica para verificar se o motorista foi multado
