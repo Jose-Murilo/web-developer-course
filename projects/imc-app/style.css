@@ -106,7 +106,7 @@ aside p {
 }
 
 .modal {
-    height: 18.0rem;    
+    height: 15.0rem;    
     width: 32.0rem;    
     margin: 0 auto;
     padding: 3.2rem;
@@ -118,6 +118,11 @@ aside p {
     text-align: center;
     background: white;
     position: relative;
+}
+
+.modal p {
+    color: black;
+    font-size: 3.2rem;
 }
 
 .closeButton {
