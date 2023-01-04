@@ -1,0 +1,9 @@
+.containerCard {
+    max-width: 320px;
+    border: 1px solid white;
+    margin: 16px auto;
+}
+
+.containerCard img {
+    width: 100%;
+}
