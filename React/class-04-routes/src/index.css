@@ -1,0 +1,19 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background: #252525;
+  color: white;
+}
+
+.container {
+  max-width: 32.0rem;
+  margin: 0 auto;
+}

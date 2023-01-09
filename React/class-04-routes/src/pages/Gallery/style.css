@@ -1,0 +1,18 @@
+h1, img, p {
+  text-align: center;
+  margin-top: 2.4rem
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+img {
+  display: block;
+  width: 12.0rem;
+  margin: 1.6rem auto;
+}
+
+p {
+  color: gray;
+}
