@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.6rem;
+}
+
+.containerLogo {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 5rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+ul a {
+    color: white;
+    list-style: none;
+}
+
+nav ul .active {
+    color: #00D8FF;
+}
